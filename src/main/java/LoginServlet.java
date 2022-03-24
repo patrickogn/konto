@@ -27,6 +27,14 @@ public class LoginServlet extends HttpServlet {
             request.getRequestDispatcher("index.jsp").forward(request,response);
 
         }
+        // det når vi hvis det lykkedes
+
+        HttpSession session = request.getSession();
+        session.setAttribute("konto", konto);
+        request.getRequestDispatcher("WEB-INF/BrugerSide.jsp").forward(request,response);
+
+
+
 
     }
 
