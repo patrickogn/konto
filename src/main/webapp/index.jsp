@@ -21,7 +21,17 @@
 
 </c:forEach>
 
+<h1>Her kan du logge ind på din konto</h1>
 
+<h1> ${requestScope.fejl}</h1>
+
+<form action="LoginServlet">
+    <label for="fname">Navn:</label><br>
+    <input type="text" id="fname" name="navn" value="navn"><br>
+    <label for="lname">Kodeord:</label><br>
+    <input type="password" id="lname" name="kode" value="hemmelig"><br><br>
+    <input type="submit" value="Login">
+</form>
 
 </body>
 </html>
